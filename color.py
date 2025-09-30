@@ -42,7 +42,7 @@ def split_image_by_rgb(image, tolerance=30, smooth=True):
     green_mask = cv2.inRange(hsv_image, green_lower, green_upper)
     blue_mask = cv2.inRange(hsv_image, blue_lower, blue_upper)
 
-    # Morphological kernel for cleaning masks
+    #Kernel for cleaning masks; again curiosu
     if smooth:
         kernel = np.ones((5, 5), np.uint8)
         red_mask = cv2.dilate(red_mask, kernel, iterations=2)
